@@ -1,0 +1,15 @@
+model:
+  transformers_kwargs:
+    embed_dim: 1536
+    drop_path_rate: 0
+    block_kwargs:
+      attn_kwargs:
+        num_heads: 24
+  encoder_kwargs:
+    depth: 6
+  decoder_kwargs:
+    depth: 1
+  in_dims: [768, 1536, 1536, 1536, 1280]
+  tile_encoder_keys: [conchv15, hoptimus1, uni2h, gigapath, virchow2]
+  num_decoders: 1
+  decoder_out_dims: [768, 1536, 1536, 1536, 1280]
