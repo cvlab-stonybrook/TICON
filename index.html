@@ -309,7 +309,7 @@
                     <div class="publication-links">
                   <!-- TODO: Update with your arXiv paper ID -->
                   <span class="link-block">
-                    <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                    <a href="https://arxiv.org/abs/2512.21331" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -343,7 +343,7 @@
               
               <!-- TODO: Update with your arXiv paper ID -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                <a href="https://arxiv.org/pdf/2512.21331" target="_blank"
                 class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                   <i class="fas fa-file-pdf"></i>
@@ -412,7 +412,7 @@
     <div class="container">
       
       <div class="has-text-centered">
-        <h2 class="title">Method: Omni-Feature Masked Modeling </h2>
+        <h2 class="title">Pretraining: Omni-Feature Masked Modeling </h2>
         <img src="static/images/method.png" alt="Method" style="max-width: 100%; height: auto;" />
       </div>
 
@@ -425,6 +425,28 @@
     </div>
   </div>
 </section>
+
+<!-- Method -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      
+      <div class="has-text-centered">
+        <h2 class="title">Inference Modes</h2>
+        <img src="static/images/inference.png" alt="Method" style="max-width: 100%; height: auto;" />
+      </div>
+
+      <h2 class="content has-text-justified" style="margin-top: 1.5rem;">
+        <strong>Overview of TICON's inference modes.</strong> 
+        <strong>(Left) Standard preprocessing pipeline:</strong> tiling the WSI followed by embedding extraction.
+        <strong>(Middle) Contextualized Inference:</strong> The default mode where the entire sequence of WSI tile embeddings is passed through the TICON Encoder. This allows the model to contextualize each tile with information from the full slide-level neighborhood.
+        <strong>(Right) Isolated Inference:</strong> An alternative inference mode where a single tile embedding is passed through TICON independently. In this setting, the Transformer effectively functions as a deep MLP (sequence length of 1). Although not the primary design intent, we empirically discovered that TICON exhibits an emergent property in this mode, enhancing individual tile representations even when slide-level context is unavailable (e.g., in the THUNDER benchmark).
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End Method -->
+
 <!-- End Method -->
 
 <!-- Results -->
@@ -461,7 +483,7 @@
   </div>
 </section>
 
-<section class="hero is-small is-light">
+<section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div class="has-text-centered">
@@ -475,7 +497,7 @@
 <!-- End Results -->
 
 <!-- Visualization -->
-<section class="hero is-small">
+<section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <div class="has-text-centered">
